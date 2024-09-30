@@ -13,9 +13,10 @@ public class UniqueFullArragement {
         if (nums.length == 0) {
             return result;
         }
+
         Arrays.fill(visited, false);
         Arrays.sort(nums);
-        permuteHelper(nums, used);
+        permuteHelper(nums, visited);
         return result;
     }
     private void permuteHelper(int[] nums, boolean[] used) {
